@@ -1,0 +1,9 @@
+<?php
+session_start();
+include("../lib.php");
+include("../xinc_lookup.php");
+include("../xinc_cari.php");
+include("xinc_menu.php");
+require("xajax_common.php");
+$xajax->processRequests();
+?>

@@ -1,0 +1,69 @@
+
+Connected to: Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+IMP-00002: failed to open D:\GITHUB\ShiftPayTracker\DB\exp_PERFECT_API_USERPIKET.dat for read
+Export file created by EXPORT:V11.01.00 via conventional path
+import done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+import server uses AL32UTF8 character set (possible charset conversion)
+IMP-00403: 
+
+Warning: This import generated a separate SQL file "D:\GITHUB\ShiftPayTracker\DB\import_USER_PIKET_sys.sql" which contains DDL that failed due to a privilege issue.
+
+. . importing table                   "HS_USERLOG"        121 rows imported
+. . importing table               "KALENDER_PIKET"         88 rows imported
+. . importing table                      "MN_MENU"         45 rows imported
+. . importing table                      "MN_ROLE"          3 rows imported
+. . importing table                  "MN_ROLEMENU"        136 rows imported
+. . importing table                 "REF_KEGIATAN"          7 rows imported
+. . importing table                  "REF_PEGAWAI"         19 rows imported
+. . importing table             "TM_CLIENT_API_VA"         17 rows imported
+. . importing table  "TM_CLIENT_API_VA_PROSES_REF"          2 rows imported
+. . importing table  "TM_CLIENT_API_VA_REKON_BANK"         24 rows imported
+. . importing table      "TM_CLIENT_API_VA_STATUS"         22 rows imported
+. . importing table   "TM_CLIENT_API_VA_TRANSAKSI"         17 rows imported
+. . importing table                "TM_PENGUMUMAN"          0 rows imported
+. . importing table           "TM_PENGUMUMAN_HIST"          5 rows imported
+. . importing table       "TM_SERVER_API_VA_AKSES"          2 rows imported
+. . importing table "TM_SERVER_API_VA_AKSES_DETAIL"          3 rows imported
+. . importing table "TM_SERVER_API_VA_AKSES_DET_DEL"          3 rows imported
+. . importing table   "TM_SERVER_API_VA_PELANGGAN"          4 rows imported
+. . importing table  "TM_SERVER_API_VA_PROSES_REF"          3 rows imported
+. . importing table      "TM_SERVER_API_VA_STATUS"         22 rows imported
+. . importing table   "TM_SERVER_API_VA_TRANSAKSI"         17 rows imported
+. . importing table "TM_SERVER_API_VA_TRANSAKSI_LOG"         33 rows imported
+. . importing table                  "TM_SESSIONS"          0 rows imported
+. . importing table                   "TM_STEP_VA"          6 rows imported
+. . importing table                      "TM_USER"         21 rows imported
+. . importing table           "VC_PASSWORD_MASTER"          0 rows imported
+. . importing table                       "VC_REF"         52 rows imported
+. . importing table                    "VC_RESULT"          0 rows imported
+. . importing table                      "VC_TEMP"          0 rows imported
+IMP-00041: Warning: object created with compilation warnings
+ "CREATE FORCE VIEW "USER_PIKET"."V_MENU"                                    "
+ "                                                                           "
+ "         ("NAMA_MENU","LINK","URUTAN","KODE_MENU","KODE_PARENT","ISCUD","NA"
+ "MA_FILE") AS "
+ "SELECT   M."NAMA_MENU","
+ "            M."LINK","
+ "            M."URUTAN","
+ "            M."KODE_MENU","
+ "            M."KODE_PARENT","
+ "            M."ISCUD","
+ "            LASTTOKEN (M.LINK) AS NAMA_FILE"
+ "     FROM   MN_MENU M "
+IMP-00041: Warning: object created with compilation warnings
+ "CREATE FORCE VIEW "USER_PIKET"."V_USERS_ONTHEFLY"                          "
+ "                                                                           "
+ "                   ("ID_USER","USERNAME","PASSWORD","KUNCI","HASIL_DECRYPT""
+ ","KODE_ROLE") AS "
+ "SELECT   ID_USER,"
+ "         USERNAME,"
+ "         PASSWORD,"
+ "         'MONITORINGSERVER' AS KUNCI,"
+ "         VC_CEK_CHAR (VC_DECRYPT_ONTHEFLY (PASSWORD, 'MONITORINGSERVER'))"
+ "            AS HASIL_DECRYPT,"
+ "         KODE_ROLE"
+ "  FROM   TM_USER "
+About to enable constraints...
+Import terminated successfully with warnings.

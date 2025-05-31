@@ -1,0 +1,1 @@
+imp USER_PIKET/admin@localhost:1521/ORCLPDB file=D:\GITHUB\ShiftPayTracker\DB\exp_PERFECT_API_USERPIKET.dat log=D:\GITHUB\ShiftPayTracker\DB\import_USER_PIKET.log fromuser=USER_PIKET touser=USER_PIKET
